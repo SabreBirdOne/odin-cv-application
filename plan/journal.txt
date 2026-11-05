@@ -1,0 +1,88 @@
+After reading the project brief, I was still kind of at a loss 
+(more like in denial and feeling intimidated) on what to do.
+
+To get a better I looked at some of the live previews of the community solutions
+to get a better idea of what to expect. 
+
+I didn't look at the code or used dev tools to peek into their HTMLs.
+
+Jasper Sajery's live website is a great example that I'd base my app on...
+
+OVERALL
+
+The app's purpose is to let users edit and add information into a markdown, 
+and use it as the CV page.
+
+The whole app should have 2 states: edit and preview.
+Edit: user can edit components via <input>, or add more components under each section.
+Preview: the app is frozen into a markdown - used for printing the website as the finished CV product.
+
+These 2 states should alternate between each other via a button
+
+# Edit
+????
+
+# Submit 
+When in Submit state, the app needs to be "frozen". <input> tags have to be hidden
+???
+
+JOURNAL
+I'll probably focus on getting this mode functionality to work on just one component.
+Then I'll expand this app to work for the rest of the components.
+
+That's right, I'll just make some big App component at the very top level.
+It has this React state variable "mode" that will determine the prop values 
+of the children?
+
+...
+
+Hmm, this app is just filled with <input> tags, no, more like blocks of these input tags 
+They all become active in the initial Edit state.
+
+I think every input should be wrapped up like this: 
+
+<div className='customInput'>
+    <label>Name</label>
+    <input/>
+</div>
+
+The app has many sections
+The general information section should be straight forward
+
+<section className="generalInfo">
+    <CustomInput /> // Full name  
+    <CustomInput /> // Email
+    <CustomInput /> // phone number
+</section>
+
+But the Education and Work Experience sections can be tricky, 
+since there's more dynamism in the number of components.
+
+<section className="education">
+    <Entry />
+    <Entry />
+    ...
+    <Entry />
+    <button>Add education experience</button> 
+</section>
+
+This component manages a shared JS file where an object lives and stores the entry info.
+
+And in each of these Entry components:
+<div className="entry">
+    <CustomInput />
+    <CustomInput />
+    ...
+    <CustomInput />
+    <button> delete </button>
+</div>
+
+...
+
+Looks like my app has at least 2 major components: Entry and CustomInput
+What CustomInput inside each Entry depends on what the Entry is supposed to have...
+
+Props and state, props and state, props and state. I'm gonna cry...
+
+
+
