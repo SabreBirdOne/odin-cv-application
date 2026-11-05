@@ -1,3 +1,8 @@
+# Project
+https://www.theodinproject.com/lessons/node-path-react-new-cv-application
+
+My first serious ReactJS project, enjoy the fumbling!
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
