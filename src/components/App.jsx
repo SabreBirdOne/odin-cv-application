@@ -1,6 +1,7 @@
 import { useState, Fragment } from "react";
 import "../styles/App.css"
 import StateButton from "./StateButton";
+import GeneralInfo from "./GeneralInfo";
 
 export default function App() {
     const [appState, setAppState] = useState('edit');
@@ -18,11 +19,8 @@ export default function App() {
             appState = {appState} 
             onClickHandler = {handleStateButton}
         />
+        <GeneralInfo appState = {appState} />
         
-        <section className="generalInfo">
-            <h2>General Information</h2>
-            
-        </section>
 
         <section className="education">
             <h2>Education</h2>
