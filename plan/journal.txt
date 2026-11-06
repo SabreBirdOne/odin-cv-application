@@ -97,5 +97,11 @@ for setAppState and appState as props.
 I guess I can control the components under App by passing 
 the appState as prop, in the same way I did for StateButton.
 
+...
+
+I'm about to write the InputDiv component (CustomInput renamed). 
+(https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input#input_types) 
+MDN says <input> has a type attribute that can be used to make the input handle 
+things like emails or phone numbers. I can pass the type attribute as props!
 
 
