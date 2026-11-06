@@ -1,15 +1,6 @@
 import { useState, Fragment } from "react";
 import "../styles/App.css"
-
-function StateButton ({ appState, onClickHandler }){
-    const buttonText = (appState === 'edit') ? 'Preview' : 'Edit';
-
-    return (
-        <button onClick = {onClickHandler}>
-            {buttonText}
-        </button>
-    )
-}
+import StateButton from "./StateButton";
 
 export default function App() {
     const [appState, setAppState] = useState('edit');
@@ -27,8 +18,6 @@ export default function App() {
             appState = {appState} 
             onClickHandler = {handleStateButton}
         />
-
-        <p>App State: {appState}</p>
         
         <section className="generalInfo">
             <h2>General Information</h2>

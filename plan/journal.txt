@@ -84,5 +84,18 @@ What CustomInput inside each Entry depends on what the Entry is supposed to have
 
 Props and state, props and state, props and state. I'm gonna cry...
 
+...
+
+I just created App component with a skeleton HTML to start. 
+
+I added an appState state variable to the App component. 
+I added a StateButton to change the appState. 
+
+Since this button is a child of App, App needs to pass the handler 
+for setAppState and appState as props. 
+
+I guess I can control the components under App by passing 
+the appState as prop, in the same way I did for StateButton.
+
 
 
