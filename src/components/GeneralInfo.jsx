@@ -8,21 +8,18 @@ export default function GeneralInfo({ appState }){
 
     const fields = [
         { 
-            appState: appState,
             label: "Full Name", 
             inputType: "text", 
             data: name, 
             setData: setName
         },
         { 
-            appState: appState,
             label: "Email", 
             inputType: "email", 
             data: email, 
             setData: setEmail
         },
         { 
-            appState: appState,
             label: "Phone", 
             inputType: "tel", 
             data: phoneNumber, 
@@ -33,7 +30,7 @@ export default function GeneralInfo({ appState }){
     return (
         <section className="generalInfo">
             <h2>General Information</h2>
-            { fields.map((field) => <InputDiv key={field.label} {...field}/>)}
+            { fields.map((field) => <InputDiv key={field.label} appState={appState} {...field}/>)}
         </section>
     )
 }
