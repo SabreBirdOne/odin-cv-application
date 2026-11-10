@@ -2,6 +2,7 @@ import { useState, Fragment } from "react";
 import "../styles/App.css"
 import StateButton from "./StateButton";
 import GeneralInfo from "./GeneralInfo";
+import EducationSection from "./EducationSection";
 
 export default function App() {
     const [appState, setAppState] = useState('edit');
@@ -20,11 +21,7 @@ export default function App() {
             onClickHandler = {handleStateButton}
         />
         <GeneralInfo appState = {appState} />
-        
-
-        <section className="education">
-            <h2>Education</h2>
-        </section>
+        <EducationSection appState = {appState} />
 
         <section className="workExperience">
             <h2>Work Experience</h2>

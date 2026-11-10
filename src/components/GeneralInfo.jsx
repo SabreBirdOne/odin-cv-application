@@ -26,7 +26,6 @@ export default function GeneralInfo({ appState }){
             setData: setPhoneNumber
         },
     ]
-
     return (
         <section className="generalInfo">
             <h2>General Information</h2>

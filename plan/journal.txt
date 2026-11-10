@@ -104,4 +104,30 @@ I'm about to write the InputDiv component (CustomInput renamed).
 MDN says <input> has a type attribute that can be used to make the input handle 
 things like emails or phone numbers. I can pass the type attribute as props!
 
+...
 
+The education section will be a React component, which holds a button to add Entries 
+and a list of Entries. 
+
+...
+
+I was thinking about turning the GeneralInfo component into a generic Entry component
+with a dynamic fields prop variable. But upon closer look, I realized the fields 
+array of objects contain the state variable and set state functions defined within 
+GeneralInfo. 
+
+Which means anything holding this Entry component needs to manage all these state variables 
+as the parent, and pass the state variables into Entry as props. 
+
+But I don't want this, I want each component to manage its own data...
+I miss subtype polymorphism. https://en.wikipedia.org/wiki/Subtyping ???
+
+...
+
+Fine, let's do it the hard way for now. Stick to the plans for Education 
+and EducationEntry component as above.
+
+Except... now I'm starting to reconsider having the parent manage state variables as props
+useState can just be called once on some entry array of objects in the parent,
+then each entry gets one object in this array. the setState function for this state variable
+ just copies this whole object and add new empty in. Perfect.
