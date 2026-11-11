@@ -131,3 +131,37 @@ Except... now I'm starting to reconsider having the parent manage state variable
 useState can just be called once on some entry array of objects in the parent,
 then each entry gets one object in this array. the setState function for this state variable
  just copies this whole object and add new empty in. Perfect.
+
+ ...
+
+On branch parent-manage-data
+
+Each entry in the eduData object should have: school name, study title, begin date, end date
+
+Yeah but what data structure is best used to contain each education entry?
+Need to: add entries, edit entries, delete entries.
+
+Part of my initial headache is my habit of going for the most optimal data structure 
+possible. In a vacumn, I would just pick hash tables 90% of the time. 
+
+But yeah, like I will go through the headache of managing a hash table 
+inside a React state variable. 
+
+Instead, from the react.dev website on Choosing the State Structure,
+(https://react.dev/learn/choosing-the-state-structure#challenges)
+
+The guide used an array of objects, where each object could be one of the education entries. 
+The add, edit and delete function that they present takes linear time.
+
+Which sounds bad in a vacumn. But realistically, this array is used for a packing
+list. I'm sure most people don't have *quite literally* billions of things in their 
+packing list, so many things that would make array operations in JS physically slow.
+
+The same can be said about a resume. Billions of schools passed and jobs experienced 
+is impressive, but not realistic either. I find it acceptable to do things in linear time 
+if the data size isn't enormous to begin with. So let's do array of "entry" objects.
+
+The maintainability of code at this point is more valuable than pointless optimization.
+
+...
+An array of "entry" objects, each entry in the eduData object should have: school name, study title, begin date, end date
