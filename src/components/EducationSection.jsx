@@ -36,7 +36,12 @@ export default function EducationSection ({ appState }) {
     return (
         <section className="educationSection">
             <h2>Education</h2>
-            <button onClick={handleAddEduData}>Add Entry</button>
+            <button 
+                onClick={handleAddEduData}
+                style={{display: appState === 'edit' ? "inline" : "none"}}
+            >
+                Add Entry
+            </button>
             {eduData.map((entryData) => 
                 <EduEntry 
                     key={entryData.id} 
