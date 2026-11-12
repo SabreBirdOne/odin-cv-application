@@ -165,3 +165,28 @@ The maintainability of code at this point is more valuable than pointless optimi
 
 ...
 An array of "entry" objects, each entry in the eduData object should have: school name, study title, begin date, end date
+...
+
+I ran into a major implementation challenge with EduEntry, but I overcame it. 
+
+As you know, eduData is managed by parent component EducationSection, an array of objects representing each entry. 
+When EducationSection renders, it creates a list of <EduEntry> children components, each child getting one of the objects 
+from eduData. 
+
+However, EduEntry itself has 4 InputDivs, each responsible for 4 out of 5 of the columns of an entryData object. 
+
+The flow has to go from: onChange in the inputDiv => setData(e.target.value) => ... => the parent's handler to update the eduData state variable.
+
+I wrote InputDiv to only allow 1 argument, that being the new input value upon component change, but nowhere to supply *which* column 
+to push this new input value to in the eduData state variable.
+
+My solution is to use function currying! Function currying is basically: a function that constructs and returns another function. 
+So I can construct 1-argument functions, one for each column of entryData.
+
+/* 
+    function add(a) {
+        return function(b) {
+            return a + b;
+        }
+    }
+*/
