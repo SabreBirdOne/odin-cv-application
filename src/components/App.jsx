@@ -3,6 +3,7 @@ import "../styles/App.css"
 import StateButton from "./StateButton";
 import GeneralInfo from "./GeneralInfo";
 import EducationSection from "./EducationSection";
+import WorkSection from "./WorkSection";
 
 export default function App() {
     const [appState, setAppState] = useState('edit');
@@ -22,9 +23,7 @@ export default function App() {
         />
         <GeneralInfo appState = {appState} />
         <EducationSection appState = {appState} />
+        <WorkSection appState = {appState} />
 
-        <section className="workExperience">
-            <h2>Work Experience</h2>
-        </section> 
     </div>)
 }

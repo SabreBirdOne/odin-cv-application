@@ -190,3 +190,10 @@ So I can construct 1-argument functions, one for each column of entryData.
         }
     }
 */
+
+...
+
+Now that the education section is complete, I got a feeling that I'm going to be repeating myself for the work experience section.
+Yes, I know, DON'T REPEAT YOURSELF is our way of life here...
+
+That was easy. Just a whole lot of copy and paste. These Section-Entry pair of components are just begging to be refactored one day.

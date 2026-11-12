@@ -7,7 +7,6 @@ export default function EduEntry ({ appState, entryData, editHandler, deleteHand
         return (inputValue) => {
             let edittedEntry = {...entryData};
             edittedEntry[column] = inputValue;
-            console.log(edittedEntry);
             editHandler(edittedEntry);
         }
 
