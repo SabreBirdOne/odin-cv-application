@@ -1,5 +1,8 @@
 import { useState, Fragment } from "react";
-import "../styles/App.css"
+import "../styles/App.css";
+import "../styles/Sections.css";
+import "../styles/InputDiv.css";
+
 import StateButton from "./StateButton";
 import GeneralInfo from "./GeneralInfo";
 import EducationSection from "./EducationSection";

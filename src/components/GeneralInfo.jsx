@@ -1,5 +1,3 @@
-import "../styles/Sections.css"
-
 import { useState } from "react";
 import InputDiv from "./InputDiv";
 
