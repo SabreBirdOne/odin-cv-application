@@ -1,0 +1,9 @@
+.InputDiv {   
+    display: flex;
+    gap: 1ch;
+    justify-content: space-between;
+}
+
+.InputDiv p {
+    margin: 0;
+}

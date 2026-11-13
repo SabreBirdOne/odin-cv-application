@@ -1,8 +1,9 @@
+import "../styles/InputDiv.css"
+
 export default function InputDiv({ appState, label, inputType, data, setData}){    
     return (
         <div className="InputDiv">
-            <label>{label}</label>
-            {": "}
+            <label>{label + ":"}</label>
             <p
                 style={{display: appState === 'edit' ? "none" : "inline"}}
             
