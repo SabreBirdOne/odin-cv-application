@@ -1,0 +1,30 @@
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+section h2 {
+    margin: 0;
+    align-self: center;
+}
+
+section .addEntryButton {
+    width: 90vw;
+    padding: 1ch;
+    align-self: center;
+
+    border-radius: 10px;
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
+@media (min-width: 426px) {
+    section h2 {
+        align-self: flex-start;
+    }
+    section .addEntryButton {
+        width: 30ch;
+        align-self: flex-start;
+    }
+}

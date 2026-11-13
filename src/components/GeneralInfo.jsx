@@ -1,3 +1,5 @@
+import "../styles/Sections.css"
+
 import { useState } from "react";
 import InputDiv from "./InputDiv";
 
@@ -29,7 +31,10 @@ export default function GeneralInfo({ appState }){
     return (
         <section className="generalInfo">
             <h2>General Information</h2>
-            { fields.map((field) => <InputDiv key={field.label} appState={appState} {...field}/>)}
+            <div className="generalInfoDiv">
+                { fields.map((field) => <InputDiv key={field.label} appState={appState} {...field}/>)}
+            </div>
+            
         </section>
     )
 }

@@ -1,3 +1,5 @@
+import "../styles/Sections.css"
+
 import { useState } from "react";
 import { format } from "date-fns";
 
@@ -36,12 +38,6 @@ export default function WorkSection ({ appState }) {
     return (
         <section className="workSection">
             <h2>Work Experience</h2>
-            <button 
-                onClick={handleAddWorkData}
-                style={{display: appState === 'edit' ? "inline" : "none"}}
-            >
-                Add Entry
-            </button>
             {workData.map((entryData) => 
                 <WorkEntry 
                     key={entryData.id} 
@@ -50,6 +46,13 @@ export default function WorkSection ({ appState }) {
                     editHandler={handleEditWorkData}
                     deleteHandler={handleDeleteWorkData}
                 />)}
+            <button 
+                className="addEntryButton"
+                onClick={handleAddWorkData}
+                style={{display: appState === 'edit' ? "inline" : "none"}}
+            >
+                Add Work Experience
+            </button>
         </section>
     )
 }
