@@ -1,0 +1,28 @@
+.generalInfoDiv, .eduEntry, .workEntry {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.deleteEntryButton {
+    width: 20ch;
+    padding: 1ch;
+
+    border-radius: 10px;
+    background-color: lightcoral;
+    font-weight: bold;
+}
+
+@media (min-width: 426px) {
+    .generalInfoDiv, .eduEntry, .workEntry {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}
+
+@media (min-width: 769px){
+    .generalInfoDiv, .eduEntry, .workEntry {
+        gap: 8px;
+    }
+}
+

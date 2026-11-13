@@ -43,6 +43,7 @@ export default function EduEntry ({ appState, entryData, editHandler, deleteHand
         <div className="eduEntry">
             { fields.map((field) => <InputDiv key={field.label} appState={appState} {...field}/>)}
             <button 
+                className="deleteEntryButton"
                 style={{display: appState === 'edit' ? "inline" : "none"}}
                 onClick={()=>{deleteHandler(entryData.id)}}
             >
