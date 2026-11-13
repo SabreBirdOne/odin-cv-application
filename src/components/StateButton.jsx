@@ -1,8 +1,8 @@
 export default function StateButton ({ appState, onClickHandler }){
-    const buttonText = (appState === 'edit') ? 'Preview' : 'Edit';
+    const buttonText = (appState === 'edit') ? 'Preview Application' : 'Edit Application';
 
     return (
-        <button onClick = {onClickHandler}>
+        <button className="stateButton" onClick = {onClickHandler}>
             {buttonText}
         </button>
     )
